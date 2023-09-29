@@ -26,25 +26,6 @@ namespace CalculatorB2B
         }
 
         public class CalcException : Exception { };
-
-        [Serializable]
-        internal class BadOperatorException : Exception
-        {
-            public BadOperatorException()
-            {
-            }
-
-            public BadOperatorException(string? message) : base(message)
-            {
-            }
-
-            public BadOperatorException(string? message, Exception? innerException) : base(message, innerException)
-            {
-            }
-
-            protected BadOperatorException(SerializationInfo info, StreamingContext context) : base(info, context)
-            {
-            }
-        }
+        public class BadOperatorException : CalcException { };
     }
 }
